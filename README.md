@@ -13,31 +13,15 @@ Project on Software Engineering Course, CVUT
 ##Content of the iterations
 
 - **1st iteration**
-mainly analysis and inception of design
-it is strongly recommended to start experimenting with the project technologies and frameworks early on
-documentation
-Analysis of business processes
-Most important business-oriented processes in the domain that should be supported and improved by the system
-UML Activity diagrams + textual description of the processes
-Requirements analysis
-Requirements catalogue - a list of functional and non-functional requirements with descriptions
-Use case model
-List of actors and their description
-UML Use Case diagrams - actors, use cases, boundary
-Description of all use cases
-Detailed description of the most crucial use cases
-At least the same number as the number of team members
-Non-trivial use cases, the main functions to achieve the business goals
-Scenarios - main scenario, alternative scenarios
-Mapping of the use cases onto the requirements
-Domain model
-UML Class diagram(s) - classes with attributes, associations with names and cardinalities
-Description of the domain entities (classes), their attributes and relations
-UML State diagram(s) for specific entities with important states
-Overview of the crucial UCs
-A separate page linked from the home page.
-Summary of the most crucial business use cases that will be designed and implemented in the next iterations.
-Each UC with a short description and scenario.
+	- Mainly analysis and inception of design
+	- Analysis of business processes (most important business-oriented processes in the domain that should be supported and improved by the system)
+	- UML Activity diagrams + textual description of the processes
+	- Requirements analysis
+	- Requirements catalogue - a list of functional and non-functional requirements with descriptions
+	- Use case model (List of actors and their description, UML Use Case diagrams - actors, use cases, boundary, Scenarios - main scenario, alternative scenarios, Mapping of the use cases onto the requirements)
+	- Domain model
+	- UML Class diagram(s) - classes with attributes, associations with names and cardinalities
+	- UML State diagram(s) for specific entities with important states
 
 - **2nd iteration**
 mainly design, finishing analysis, inception of implementation
