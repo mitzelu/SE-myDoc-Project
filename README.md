@@ -54,7 +54,7 @@ Project on Software Engineering Course, CVUT
 		- structure of the system database
 		- description of database tables, primary and foreign keys, data types, realization of many-to-many relations
 
-- **3rd iteration*
+- **3rd iteration**
 	- mainly implementation, finishing analysis and design
 		- implementation of the application prototype
 			- the implementation must comply to the design documentation - in structure, in names, in communication principles, etc.
