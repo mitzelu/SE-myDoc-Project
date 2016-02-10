@@ -71,5 +71,5 @@ Project on Software Engineering Course, CVUT
 		- [Implementation documentation](https://github.com/mitzelu/SE-myDoc-Project/blob/master/documentation-EA-diagrams/code-doc.pdf)
 			- Documentation automatically generated from the source code - JavaDoc, PHPDoc, etc.
 			- Detailed documentation of interfaces and classes (with methods) implementing the implemented use cases
-		- Source code
+		- [Source code](https://github.com/mitzelu/SE-myDoc-Project/tree/master/source-code)
 			- Complete source code of the application
