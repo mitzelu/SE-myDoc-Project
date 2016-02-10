@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>DAO Package &mdash; myDocApp 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="myDocApp 1.0 documentation" href="index.html" />
+    <link rel="next" title="Controllers Package" href="controllers.html" />
+    <link rel="prev" title="Welcome to myDocApp’s documentation!" href="index.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dao-package">
+<h1>DAO Package<a class="headerlink" href="#dao-package" title="Permalink to this headline">¶</a></h1>
+<p>The DAO class provides an abstract interface to the database and some specific data operations without exposing details of the database.</p>
+<span class="target" id="module-doctors.dao"></span><dl class="class">
+<dt id="doctors.dao.AppointmentDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">AppointmentDAO</code><a class="headerlink" href="#doctors.dao.AppointmentDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract interface to database object: Specialization</p>
+<dl class="method">
+<dt id="doctors.dao.AppointmentDAO.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>patient</em>, <em>doctor</em>, <em>date</em>, <em>valid</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.AppointmentDAO.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which creates new appointments specifing the Patient which created, Doctor which was booked, date of creation and validation status</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.AppointmentDAO.getByDoctor">
+<code class="descname">getByDoctor</code><span class="sig-paren">(</span><em>doctor</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.AppointmentDAO.getByDoctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database the Appointments made by the specified Doctor object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.AppointmentDAO.getByID">
+<code class="descname">getByID</code><span class="sig-paren">(</span><em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.AppointmentDAO.getByID" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database the Appointments made by the specified appointment&#8217;s ID (primary key)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.AppointmentDAO.getByPatient">
+<code class="descname">getByPatient</code><span class="sig-paren">(</span><em>patient</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.AppointmentDAO.getByPatient" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database the Appointments made by the specified Patient object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.AppointmentDAO.getTakenDays">
+<code class="descname">getTakenDays</code><span class="sig-paren">(</span><em>doctor</em>, <em>date</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.AppointmentDAO.getTakenDays" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database the days of the specified Doctor timetable which are allready taken for appointments</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="doctors.dao.AuthentificationDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">AuthentificationDAO</code><a class="headerlink" href="#doctors.dao.AuthentificationDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>class working with logging in the myDoc System</p>
+<dl class="method">
+<dt id="doctors.dao.AuthentificationDAO.findUserByUsername">
+<code class="descname">findUserByUsername</code><span class="sig-paren">(</span><em>user</em>, <em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.AuthentificationDAO.findUserByUsername" title="Permalink to this definition">¶</a></dt>
+<dd><p>method for cheking if the credentials entered by user are in the database (i.e. if such a user exists).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="doctors.dao.BaseDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">BaseDAO</code><a class="headerlink" href="#doctors.dao.BaseDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>BaseDAO contains all the abstracts methods that should be implemented in the Controller.</p>
+<dl class="method">
+<dt id="doctors.dao.BaseDAO.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.BaseDAO.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract method for deleting objects from database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.BaseDAO.getAll">
+<code class="descname">getAll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.BaseDAO.getAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract method which returns all specified types of objects from database</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.BaseDAO.getById">
+<code class="descname">getById</code><span class="sig-paren">(</span><em>ID</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.BaseDAO.getById" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract method which returns the objects from database which has the specified ID (primary key)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.BaseDAO.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.BaseDAO.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstractmethod methods which save created object to database</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="doctors.dao.DoctorDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">DoctorDAO</code><a class="headerlink" href="#doctors.dao.DoctorDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract interface to database object: Doctor</p>
+<dl class="method">
+<dt id="doctors.dao.DoctorDAO.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>name</em>, <em>spec</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.DoctorDAO.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates new objects of type Patient by and specialization</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.DoctorDAO.getByCriteria">
+<code class="descname">getByCriteria</code><span class="sig-paren">(</span><em>spec</em>, <em>zipcode</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.DoctorDAO.getByCriteria" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database Doctor objects with specified specialization and zip_code</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="doctors.dao.DoctorDAO.getByFilter">
+<code class="descname">getByFilter</code><span class="sig-paren">(</span><em>gen</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.DoctorDAO.getByFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database Doctor objects with specified gender</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="doctors.dao.HospitalDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">HospitalDAO</code><a class="headerlink" href="#doctors.dao.HospitalDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract interface to database object: Specialization</p>
+<dl class="method">
+<dt id="doctors.dao.HospitalDAO.getByDoctor">
+<code class="descname">getByDoctor</code><span class="sig-paren">(</span><em>doctor</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.HospitalDAO.getByDoctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database the Hospital of specified Doctor object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="doctors.dao.PatientDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">PatientDAO</code><a class="headerlink" href="#doctors.dao.PatientDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract interface to database object: Patient</p>
+<dl class="method">
+<dt id="doctors.dao.PatientDAO.create">
+<code class="descname">create</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.PatientDAO.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates new objects of type Patient by name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="doctors.dao.SpecializationDAO">
+<em class="property">class </em><code class="descclassname">doctors.dao.</code><code class="descname">SpecializationDAO</code><a class="headerlink" href="#doctors.dao.SpecializationDAO" title="Permalink to this definition">¶</a></dt>
+<dd><p>abstract interface to database object: Specialization</p>
+<dl class="method">
+<dt id="doctors.dao.SpecializationDAO.getByDoctor">
+<code class="descname">getByDoctor</code><span class="sig-paren">(</span><em>doctor</em><span class="sig-paren">)</span><a class="headerlink" href="#doctors.dao.SpecializationDAO.getByDoctor" title="Permalink to this definition">¶</a></dt>
+<dd><p>method which returns from database type of Specialization of specified Doctor object</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to myDocApp&#8217;s documentation!</a></li>
+      <li>Next: <a href="controllers.html" title="next chapter">Controllers Package</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/dao.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2016, luminita.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.6</a>
+      
+      |
+      <a href="_sources/dao.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
