@@ -12,7 +12,7 @@ Project on Software Engineering Course, CVUT
 
 ##Content of the iterations
 
-- **1st iteration**
+- [**1st iteration**](https://github.com/mitzelu/SE-myDoc-Project/blob/master/documentation-EA-diagrams/MyDoc-analysis.pdf)
 	- mainly analysis and inception of design
 	- analysis of business processes (most important business-oriented processes in the domain that should be supported and improved by the system)
 	- UML Activity diagrams + textual description of the processes
@@ -23,7 +23,7 @@ Project on Software Engineering Course, CVUT
 	- UML Class diagram(s) - classes with attributes, associations with names and cardinalities
 	- UML State diagram(s) for specific entities with important states
 
-- **2nd iteration**
+- [**2nd iteration**](https://github.com/mitzelu/SE-myDoc-Project/blob/master/documentation-EA-diagrams/MyDoc-design_v2.pdf)
 	- mainly design, finishing analysis, inception of implementation
 	- finalization of the analysis based on design decisions
 	- design decisions, specification of architecture and technologies
@@ -64,15 +64,12 @@ Project on Software Engineering Course, CVUT
 		- the UI is not important, not all situations need to be checked, etc. - it is a prototype
 		- the prototype is presented in the class
 	- documentation
-		- Installation guide
+		- [Installation guide](https://github.com/mitzelu/SE-myDoc-Project/blob/master/documentation-EA-diagrams/installation_guide.pdf)
 			- UML Deployment diagram + description
 				- Description of the structure of the environment and requirements - OS, Java, browser, etc.
 			- Description the process of installation and start of the application
-		- Implementation documentation
+		- [Implementation documentation](https://github.com/mitzelu/SE-myDoc-Project/blob/master/documentation-EA-diagrams/code-doc.pdf)
 			- Documentation automatically generated from the source code - JavaDoc, PHPDoc, etc.
 			- Detailed documentation of interfaces and classes (with methods) implementing the implemented use cases
 		- Source code
 			- Complete source code of the application
-
- - [WP](https://github.com/TUM-FAF/FAF-121-Leahu-Luminita/tree/master/WP)
- - [IDE](https://github.com/TUM-FAF/FAF-121-Leahu-Luminita/tree/master/IDE)
